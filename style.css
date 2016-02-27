@@ -2,16 +2,74 @@ body {
   color: #222;
   background: #F3F3F3;
   overflow-x: hidden;
+  font-family: "SF UI TEXT", "Circular STD", "Avenir Next", "Helvetica Neue", "Arial", san-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "SF UI TEXT", "Circular STD", "Avenir Next", "Helvetica Neue", "Arial", san-serif;
+}
+
+@-webkit-keyframes pulse {
+      0% {color: #0074D9;}
+     20% {color: #2ECC40;}
+     40% {color: #FFDC00;}
+     60% {color: #B10DC9;}
+     80% {color: #D8CAB4;}
+     100% {color: #000;}
+}
+
+.interior-page {
+  min-height: 100%;
+  z-index: -1;
+  background: #F3F3F3;
+  color: #999;
+  border: 24px solid white;
+}
+
+.interior-page ul {
+  margin-top: 2rem;
+  color: black;
+}
+
+.caps {
+  letter-spacing: 0px;
+}
+
+.menu.visible {
+  opacity: 1;
+  z-index: 201;
+}
+
+.interior-page h1 {
+  font-weight: normal;
+}
+
+.pulse:hover {
+  -webkit-animation: pulse 1s infinite alternate;
+}
+
+.pulse.is-active {
+  -webkit-animation: pulse 10s infinite;
 }
 
 .logo {
   width: 120px;
 }
 
+a {
+  color: inherit;
+}
+
 .header {
-  position: relative;
   z-index: 101;
-  background: #F3F3F3;
+  background: black;
+  color: white;
 }
 
 .table-fixed {
@@ -24,7 +82,7 @@ body {
 }
 
 .mw {
-  max-width: 48rem;
+  max-width: 52rem;
 }
 
 iframe {
@@ -45,7 +103,7 @@ iframe.visible {
 @media(min-width: 64rem) {
   .hero {
     padding-top: 5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
   }
   
   .callout {
@@ -54,5 +112,10 @@ iframe.visible {
   
   iframe {
     max-height: 575px;
+  }
+
+  .interior-page h1 {
+    font-size: 72px;
+    letter-spacing: -3px;
   }
 }
